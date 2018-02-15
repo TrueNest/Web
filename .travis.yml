@@ -1,4 +1,7 @@
 language: node_js
+install:
+  - npm install
+script: gulp dev
 deploy:
   provider: elasticbeanstalk
   access_key_id: "AKIAIU5T35CNLQZXZFMA"
