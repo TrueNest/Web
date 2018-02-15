@@ -13,8 +13,8 @@
     ],
     "scripts": {
         "test": "node test.js",
-        "start": "node server.js",
-        "start:gulp": "gulp dev"
+        "start": "gulp",
+        "start:dev": "gulp dev"
     },
     "dependencies": {
         "bootstrap": "4.0.0",

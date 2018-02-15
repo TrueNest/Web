@@ -99,19 +99,8 @@ gulp.task('js:minify', function() {
 // JS
 gulp.task('js', ['js:minify']);
 
-// Default task
-gulp.task('default', ['css', 'js', 'vendor']);
-
-// Configure the browserSync task
-// gulp.task('browserSync', function() {
-//   browserSync.init({
-//     server: {
-//       baseDir: "./"
-//     }
-//   });
-// });
-
-gulp.task('dev:server', function() {
+// Server start
+gulp.task('start', function() {
   pm2.connect(true, function () {
     pm2.start({
         name: 'TrueNest Web',
@@ -123,6 +112,18 @@ gulp.task('dev:server', function() {
   });
 });
 
+// Default task
+gulp.task('default', ['css', 'js', 'vendor', 'start']);
+
+// Configure the browserSync task
+// gulp.task('browserSync', function() {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./"
+//     }
+//   });
+// });
+
 gulp.task('stop', function(cb) {
   exec('sudo pm2 stop all', function(err, stdout, stderr) {
     console.log(stdout);
@@ -132,7 +133,7 @@ gulp.task('stop', function(cb) {
 });
 
 // Dev task
-gulp.task('dev', ['css', 'js', 'dev:server'], function() {
+gulp.task('dev', ['css', 'js', 'start'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
