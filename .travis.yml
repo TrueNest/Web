@@ -1,0 +1,10 @@
+language: node_js
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: "AKIAIU5T35CNLQZXZFMA"
+  secret_access_key:
+    secure: "ugQT+MH0wbURxdjPdLMfbCj3zOQxdmTAkzUvuQKBIWYVP4aCs91LWGVVkRNx/WkLtPRE06mHVy6RGrKhirtM8uX3VGNaia43LcXwAcLmEuB5raqiGTyAPLxcOFd7qs/jawEfvTJDWhTUyEtyr90jIS5kB9Iix7ogNZFJQ1g1dhRxTUm9JvsHlIdsmDCptObe4jGmHquIBGzCr+u0x9Iy1ATLXsWqejjzQGo5xHCZmmyuFIzXFyZB+71F2LR+CipHqGk9GDLHWeKNnmG3GjOuoVM7TFU4IZG5aLDuAKMiNVutkf0SQfW81mZ2bByx6i2fJh6qrG9AoQEvBa23XXqZqb+Mm+hJ1dBdnIirNrYl1KRCKRax7vW55vSDK40xh0jtDaMi/PKLb/QWHh6+1jTfrab0eapSxpWI9ruOT8+dXvTLWz2tYqSgnc33/icXS+yyCcFEQqaswSs4qEh+P571Uh1kc7MB/Q+gfZGh0FK1PYscQEw+UfBNXzZ2XRgixsYwl3cPbKLorADRXaUA7gjMtkmg5XV4W4GCiPjQKlVBEZIU+wOdi9NttAJLtofFrRxVkMElLGWN6ZtS77n76mos7sLZxEXKw7jvkovpz/3ao+Gk8woDfB7JCf9SwNHpcuMXfwUz2KLKMu61l+sLsq+Ut73a63X31ghC3456i0YsLrg="
+  region: "ap-northeast-2"
+  app: "truenestweb"
+  env: "truenestweb-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-748321859832"
