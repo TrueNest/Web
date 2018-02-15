@@ -13,7 +13,8 @@
     ],
     "scripts": {
         "test": "node test.js",
-        "start": "gulp",
+        "build": "gulp",
+        "start": "gulp start",
         "start:dev": "gulp dev"
     },
     "dependencies": {
