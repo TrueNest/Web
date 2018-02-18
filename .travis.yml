@@ -14,6 +14,7 @@ deploy:
   region: ap-northeast-2
   app: truenestweb
   env: truenestweb-env
+  bucket_name: elasticbeanstalk-ap-northeast-2-748321859832
 after_deploy: npm start
 env:
   global:
