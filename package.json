@@ -14,7 +14,7 @@
     "scripts": {
         "test": "node test.js",
         "build": "gulp",
-        "start": "node bin/www",
+        "start": "gulp start",
         "start:dev": "gulp dev"
     },
     "dependencies": {
