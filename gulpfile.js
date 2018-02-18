@@ -104,7 +104,7 @@ gulp.task('start', function() {
   pm2.connect(true, function () {
     pm2.start({
         name: 'TrueNest Web',
-        script: 'server.js',
+        script: 'server.js --watch',
     }, function () {
         console.log('pm2 started');
         pm2.streamLogs('all', 0);
