@@ -122,7 +122,7 @@ gulp.task('stop', function(cb) {
 });
 
 // Default task
-gulp.task('default', ['stop', 'css', 'js', 'vendor']);
+gulp.task('default', ['css', 'js', 'vendor']);
 
 // Configure the browserSync task
 // gulp.task('browserSync', function() {
