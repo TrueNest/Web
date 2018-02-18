@@ -1,18 +1,19 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 install:
-  - npm install
-  - npm install -g gulp-cli
+- npm install
+- npm install -g gulp-cli
 script: npm run build
 deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
   access_key_id: AKIAIG3WBSRYDYBODKAA
-  secret_access_key:
-    secure: tiOC4NiOLr+iUvdNYChX21A5xlD43HSoPm1+YutWBsdN+iN32VI2vhW05dPoho2isazEEPh9ZN65xq/ZTG7PjtEUtx2mvGnDmOGP85XggGRESJ0fVA11v4VCrjBV1VlDbmWK2t3DwD3jNTPbhNanwMGH6KYjIymzpX4rFFjmQt6pOZcvkRGWKqPGoeJF5/Qm2LkwSde6M7E23YZ80+3WwOAq1dCxwwMQJdwhFGI/KNFDDfOlQtOCykCqNGBXS5GyynLmRiUuK8RYO55B4H++haj2LOh68onviLHXZQNeNApwQRj8vBi++t+PQ/gDAnVVqgRVLEmd6jFve8RaoP0sS17M2HtehEo2uC4I7g+jF3tNW/2HGAHGuNMQattSJ9licCZOAjbDpRUhVkmny4Sh09ip6RfVKEfKZBJEag3pFN3d5MHupumFuipSB5EIRtjnxB0S903PN5mYJ+utAK2jAmF4UuLIFYmoj8zeV7BjBCdBvRtDjwkNQulg8d6aByy2Om1dHZBY5bEQgBRDy4e0l7oi3olLrnRvhDijVCRgejWOytLdcix3hPQ+6No5Zhz4NduylGMchobQleY+T5gZWUeSmOGjSjDkS6zbdanhWfqz9ujHJEPBZnXL/xmbFR8VX/FxQL6aeIf32lgoMwzG8suTEVCaV/fQ9tqUEpwRPlg=
-  region: "ap-northeast-2"
-  app: "truenestweb"
-  env: "truenestweb-env"
-  bucket_name: "elasticbeanstalk-ap-northeast-2-748321859832"
+  region: ap-northeast-2
+  app: truenestweb
+  env: truenestweb-env
+  bucket_name: elasticbeanstalk-ap-northeast-2-748321859832
 after_deploy: npm start
+env:
+  global:
+    secure: ycDy5hpk1aXfG/JwW4MwF3XonlBt6r7qxZtkYXv6gtamqCDyJkGOkUUhtOl30FI19qUO6FAtrijLfgFwg5Ds7X65kAfrwKAglyMJjgFC4SiLUISq1AgKeGvx0X3QyYyIoP9QNnaFz0DnHIzWYKL1kABatk16kEUj0tHuxzIGVeJJbwhNLlNDeAmpW2o7H9YxcGqYey6KaTVV3X91y1upK/s96Bd2IasacYW7LOMn8fu7ddNFycRyI+qT66tOUWYbcQQ5NzACvyuC49DUwMzpRaNSIjbdSTvMwvh+98+yWsXM0fmLjebydvcj6E0aauDQeoohMaMqQwYNeiJ8Jmfy4CQg1dCWchlved35FX2Ms7r6Ayk/QmT3YDadzK7ujODp+JDiWIZUi1L7cWDSj7HuHvyFxtwNjgusRk3QYwFBloTaJhoLioSZrc4nQKokF4x8aSEb8HpB81H8IXjPpdIdYvJ12iiU5lPY0iYSzrnrzwOPU17ZreNuqV6HFPjd5t72dZV0au/xWB24RRxvbWg5Ns5upUxfoUbghfW4FEIiRtefnEOAIY49hsME0ykDHRPt87sRIOc5jmaw0Yc0bJlamdWUotGgY+z5+1F8jFWn/l58e7RPa8WM769ffzjQrjgCTtVOE1hKPBrp5mdJKSbtsBMz/ZOOUNns8TkjNxRQXK8=
