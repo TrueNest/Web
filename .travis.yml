@@ -3,7 +3,10 @@ node_js:
 - '8'
 install:
 - npm install
+- npm install -g gulp
 - npm install -g gulp-cli
+- npm install -g express
+- npm install -g pm2
 script: npm run build
 deploy:
   provider: elasticbeanstalk
