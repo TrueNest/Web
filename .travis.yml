@@ -3,8 +3,9 @@ node_js:
   - "8"
 install:
   - npm install
-before_script:
   - npm install -g gulp-cli
+before_script:
+  - gulp stop
 script: npm build
 deploy:
   provider: elasticbeanstalk
