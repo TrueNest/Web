@@ -112,8 +112,17 @@ gulp.task('start', function() {
   });
 });
 
+// Server stop
+gulp.task('stop', function(cb) {
+  exec('sudo pm2 stop all', function(err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
 // Default task
-gulp.task('default', ['css', 'js', 'vendor']);
+gulp.task('default', ['stop', 'css', 'js', 'vendor']);
 
 // Configure the browserSync task
 // gulp.task('browserSync', function() {
@@ -123,14 +132,6 @@ gulp.task('default', ['css', 'js', 'vendor']);
 //     }
 //   });
 // });
-
-gulp.task('stop', function(cb) {
-  exec('sudo pm2 stop all', function(err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-});
 
 // Dev task
 gulp.task('dev', ['css', 'js', 'start'], function() {
