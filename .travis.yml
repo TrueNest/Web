@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-  - '9'
+  - '8'
 cache:
   directories:
     - node_modules
 install:
   - npm install
 before_script:
-  - npm install -g gulp-cli
+  - sudo npm install -g gulp-cli
 script:
-  - npm rebuild node-sass --force
+  - sudo npm rebuild node-sass --force
   - gulp
 deploy:
   provider: elasticbeanstalk
