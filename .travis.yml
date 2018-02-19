@@ -1,13 +1,15 @@
 language: node_js
 node_js:
-- '8'
+  - '8'
 install:
-- npm install
-- npm install -g gulp
-- npm install -g gulp-cli
-- npm install -g express
-- npm install -g pm2
-script: npm run build
+  - npm install
+  - npm install -g gulp
+  - npm install -g gulp-cli
+  - npm install -g express
+  - npm install -g pm2
+script:
+  - npm run build
+  - sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3000
 deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
