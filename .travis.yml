@@ -21,3 +21,4 @@ deploy:
   bucket_name: elasticbeanstalk-ap-northeast-2-748321859832
   on:
     repo: TrueNest/Web
+    branch: master
