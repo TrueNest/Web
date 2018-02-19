@@ -5,7 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
-var browserSync = require('browser-sync').create();
+// var browserSync = require('browser-sync').create();
 var pm2 = require('pm2');
 
 // Copy third party libraries from /node_modules into /vendor
@@ -75,8 +75,8 @@ gulp.task('css:minify', ['css:compile'], function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./css'));
+    // .pipe(browserSync.stream());
 });
 
 // CSS
@@ -92,8 +92,8 @@ gulp.task('js:minify', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./js'));
+    // .pipe(browserSync.stream());
 });
 
 // JS
@@ -134,8 +134,8 @@ gulp.task('default', ['css', 'js', 'vendor']);
 // });
 
 // Dev task
-gulp.task('dev', ['css', 'js', 'start'], function() {
-  gulp.watch('./scss/*.scss', ['css']);
-  gulp.watch('./js/*.js', ['js']);
-  gulp.watch('./*.html', browserSync.reload);
-});
+// gulp.task('dev', ['css', 'js', 'start'], function() {
+//   gulp.watch('./scss/*.scss', ['css']);
+//   gulp.watch('./js/*.js', ['js']);
+//   gulp.watch('./*.html', browserSync.reload);
+// });
