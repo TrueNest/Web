@@ -12,7 +12,6 @@ install:
 before_script:
   - npm install -g gulp-cli
 script:
-  - npm rebuild node-sass --force
   - gulp
 deploy:
   provider: elasticbeanstalk
