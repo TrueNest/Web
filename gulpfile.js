@@ -113,13 +113,13 @@ gulp.task('start', function() {
 });
 
 // Server stop
-gulp.task('stop', function(cb) {
-  exec('sudo pm2 stop all', function(err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-});
+// gulp.task('stop', function(cb) {
+//   exec('sudo pm2 stop all', function(err, stdout, stderr) {
+//     console.log(stdout);
+//     console.log(stderr);
+//     cb(err);
+//   });
+// });
 
 // Default task
 gulp.task('default', ['css', 'js', 'vendor']);

@@ -4,9 +4,8 @@ node_js:
 install:
   - npm install
   - npm install -g gulp-cli
-  - npm install -g express
-  - npm install -g pm2
 script:
+  - npm rebuild node-sass --force
   - npm run build
 deploy:
   provider: elasticbeanstalk
