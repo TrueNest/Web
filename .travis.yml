@@ -5,6 +5,7 @@ install:
   - NODE_ENV=production npm install
   - npm install -g gulp-cli
 script:
+  - npm rebuild node-sass --force
   - npm run build
 deploy:
   provider: elasticbeanstalk
