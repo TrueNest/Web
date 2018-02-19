@@ -1,13 +1,18 @@
 language: node_js
 node_js:
   - '8'
+cache:
+  directories:
+    - node_modules
+before_install:
+  - npm i -g npm@8.9.3
 install:
   - npm install
+before_script:
   - npm install -g gulp-cli
 script:
   - npm rebuild node-sass --force
-  - npm run build
-  - npm start
+  - gulp
 deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
