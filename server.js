@@ -4,5 +4,5 @@ var path = require('path');
 
 app.use(express.static(path.join(__dirname, "/")));
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`server listen ${port}`));
