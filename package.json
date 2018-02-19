@@ -1,7 +1,7 @@
 {
     "title": "TrueNest",
     "name": "truenest",
-    "version": "5.5.1",
+    "version": "1.0.0",
     "description": "Cleaning Service for you",
     "keywords": [
         "css",
@@ -27,7 +27,6 @@
         "scrollreveal": "3.3.6"
     },
     "devDependencies": {
-        "browser-sync": "2.23.6",
         "express": "^4.16.2",
         "gulp": "^3.9.1",
         "gulp-clean-css": "3.9.2",
